@@ -1,0 +1,41 @@
+{
+  "name": "gatsby-plugin-ebook",
+  "version": "1.0.0",
+  "description": "Creates an ebook from your Gatsby posts",
+  "homepage": "https://github.com/cowchimp/gatsby-plugin-ebook",
+  "author": "cowchimp",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "epub-gen": "^0.1.0",
+    "remark-html": "^10.0.0",
+    "remark-parse": "^6.0.3",
+    "unified": "^8.2.0",
+    "unist-util-visit": "^1.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=8.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cowchimp/gatsby-plugin-ebook.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "epub",
+    "ebook"
+  ]
+}
