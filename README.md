@@ -26,7 +26,106 @@ Add `'gatsby-plugin-ebook'` to the `plugins` array in `gatsby-config.js`:
 
 Next time you build your site with the `build` command, an epub e-book will be generated in your `public` folder.
 
-## Runnning tests
+## Customizing
+
+By switching to the notation that lets you pass an `options` object you can customize how your e-book is created.
+
+```diff
+  plugins: [
+    'gatsby-plugin-react-helmet',
+-   'gatsby-plugin-ebook',
++   {
++     resolve: 'gatsby-plugin-ebook',
++     options: {
++       // custom options go here
++     }
++   }
+  ]
+```
+
+The `options` object you pass is merged with the default options object, so you can (and should) only override the properties you want to customize.  
+Also, you can refer to the [source code](defaults.js) of the default options to use as a starting-off point.
+
+Here are the currently available options:
+
+#### `query`
+
+As is customary in the Gatsby ecosystem, [graphql](https://www.gatsbyjs.org/docs/graphql) is used to fetch the posts in your site. You can copy the default query and adapt it to suit your needs (e.g. only use posts written in English to compose the e-book).
+
+```diff
+  plugins: [
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-ebook',
+    {
+      resolve: 'gatsby-plugin-ebook',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                author
+              }
+            }
+            allMarkdownRemark(
+              sort: { fields: frontmatter___date, order: ASC },
++             filter: { fields: { langKey: { eq: "en" } } }
+            ) {
+              edges {
+                node {
+                  id
+                  fileAbsolutePath
+                  rawMarkdownBody
+                  frontmatter {
+                    title
+                    date
+                  }
+                }
+              }
+            }
+          }
+        `,
+      }
+    }
+  ]
+```
+
+#### `filename`
+
+Lets you set the name of the generated epub file.
+
+```diff
+  plugins: [
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-ebook',
+    {
+      resolve: 'gatsby-plugin-ebook',
+      options: {
++       filename: 'ebook.epub',
+      }
+    }
+  ]
+```
+
+#### `publicDir`
+
+Lets you set the directory where the ebook will be created.  
+Typically this is the local `public`, the same directory where all Gatsby content will be created.
+
+ ```diff
+   plugins: [
+     'gatsby-plugin-react-helmet',
+     'gatsby-plugin-ebook',
+     {
+       resolve: 'gatsby-plugin-ebook',
+       options: {
+ +       publicDir: './my-generated-site',
+       }
+     }
+   ]
+ ```
+
+## Running tests
 
 Run tests with `npm test`.
 
