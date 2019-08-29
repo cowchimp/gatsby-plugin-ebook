@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-ebook",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Creates an ebook from your Gatsby posts",
   "homepage": "https://github.com/cowchimp/gatsby-plugin-ebook",
   "author": "cowchimp",
