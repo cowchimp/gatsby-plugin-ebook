@@ -50,7 +50,7 @@ Here are the currently available options:
 
 #### `query`
 
-As is customary in the Gatsby ecosystem, [graphql](https://www.gatsbyjs.org/docs/graphql) is used to fetch the posts in your site. You can copy the default query and adapt it to suit your needs (e.g. only use posts written in English to compose the e-book).
+As is customary in the Gatsby ecosystem, [graphql](https://www.gatsbyjs.org/docs/graphql) is used to fetch the posts in your site. You can copy the [default query](defaults.js) and adapt it to suit your needs (e.g. only use posts written in English to compose the e-book).
 
 ```diff
   plugins: [
@@ -101,7 +101,7 @@ Lets you set the name of the generated epub file.
     {
       resolve: 'gatsby-plugin-ebook',
       options: {
-+       filename: 'ebook.epub',
++       filename: 'my-ebook.epub',
       }
     }
   ]
@@ -110,7 +110,7 @@ Lets you set the name of the generated epub file.
 #### `publicDir`
 
 Lets you set the directory where the ebook will be created.  
-Typically this is the local `public`, the same directory where all Gatsby content will be created.
+Typically this is the local `public` directory (the same directory where all Gatsby content will be created).
 
  ```diff
    plugins: [
