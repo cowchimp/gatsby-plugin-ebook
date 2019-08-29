@@ -1,9 +1,13 @@
 ![node](https://img.shields.io/node/v/gatsby-plugin-ebook.svg)
 [![npm](https://img.shields.io/npm/v/gatsby-plugin-ebook.svg)](https://www.npmjs.com/package/gatsby-plugin-ebook)
 
-# gatsby-plugin-ebook
+# gatsby-plugin-ebook 📖
 
 A [Gatsby.js](https://www.gatsbyjs.org) plugin that creates an e-book from your all your posts whenever you build your site.
+
+## Motivation
+
+If your blog contains a lot of long posts, you can use this plugin to offer your content to your readers in a way that's comfortable to read, especially in cases where there is no network connectivity :airplane: 🏝️
 
 ## Getting started
 
