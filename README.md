@@ -1,9 +1,11 @@
+
+
 ![node](https://img.shields.io/node/v/gatsby-plugin-ebook.svg)
 [![npm](https://img.shields.io/npm/v/gatsby-plugin-ebook.svg)](https://www.npmjs.com/package/gatsby-plugin-ebook)
 
 # gatsby-plugin-ebook 📖
 
-A [Gatsby.js](https://www.gatsbyjs.org) plugin that creates an e-book from your all your posts whenever you build your site.
+A [Gatsby.js](https://www.gatsbyjs.org) plugin that creates an e-book from all your posts whenever you build your site.
 
 ## Motivation
 
